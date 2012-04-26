@@ -1,0 +1,7 @@
+= Strong password check
+
+Add check for strong passwords
+
+= Author
+Turkin Ilya (iturkin@syntellect.ru). 
+
