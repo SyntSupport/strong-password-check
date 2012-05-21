@@ -50,12 +50,14 @@ module StrongPasswordCheck
             end
 
             # SPECIAL CHAR
-            unless (/.[!,@,#,$,%,^,&,*,?,_,~]/.match passwd)             # [verified] at least one spec
+            unless (/[\!,\@,\#,\$,\%,\^,\&,\*,\?,\_,\~,\(,\),\[,\],\{,\},\<,\,,\>,\.,\|,\',\",\:,\\,\/,\;]/.match passwd)             # [verified] at least one spec
               strlog   = strlog + l(:no_spec) + ", "
               ret = false
             end
             return ret, strlog
         end
+
+
 #        def strong_enough_pass (passwd)
 #            intscore   = 0
 #            #strVerdict = "weak"
