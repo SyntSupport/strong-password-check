@@ -5,6 +5,7 @@ require File.dirname(__FILE__) + '/lib/user_patch.rb'
 
 require 'dispatcher'
 Dispatcher.to_prepare :strong_password_check do
+  require_dependency 'project'
   require_dependency 'user'
   User.send(:include, StrongPasswordCheck::Patches::UserPatch)  
 end
